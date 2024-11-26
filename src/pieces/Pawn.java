@@ -1,4 +1,9 @@
 package src.pieces;
 
-public class Pawn {
+public class Pawn extends Piece
+{
+    @Override
+    public void movement() {
+
+    }
 }
