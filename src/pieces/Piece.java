@@ -7,9 +7,9 @@ import java.awt.*;
 public abstract class Piece
 {
     protected boolean isWhite;
-    Image img;
-    Position position;
+    protected Image img;
+    protected Position position;
 
-    public abstract void movement();
+    public abstract void potentialMovements();
 
 }
