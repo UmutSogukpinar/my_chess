@@ -1,6 +1,6 @@
 package src.pieces;
 
-import src.pieces.piece_movements.Position;
+import src.chess_board.BoardSquare;
 
 import java.awt.*;
 
@@ -8,8 +8,8 @@ public abstract class Piece
 {
     protected boolean isWhite;
     Image img;
-    Position position;
+    BoardSquare square;
 
-    public abstract void movement();
+    public abstract void showPotentialMovement();
 
 }

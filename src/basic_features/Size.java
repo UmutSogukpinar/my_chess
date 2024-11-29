@@ -1,11 +1,11 @@
-package src.pieces.piece_movements;
+package src.basic_features;
 
-public class Position
+public class Size
 {
     int x_axis;
     int y_axis;
 
-    public Position(int x_axis, int y_axis)
+    public Size(int x_axis, int y_axis)
     {
         this.x_axis = x_axis;
         this.y_axis = y_axis;
