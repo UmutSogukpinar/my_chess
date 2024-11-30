@@ -1,6 +1,6 @@
 package src.pieces;
 
-import src.pieces.piece_movements.Position;
+import src.chess_board.BoardSquare;
 
 import java.awt.*;
 
@@ -9,19 +9,15 @@ public class Pawn extends Piece
     Image whitePawnImg;
     Image blackPawnImg;
 
-    public Pawn(boolean isWhite, Position position)
+    public Pawn(boolean isWhite, BoardSquare square)
     {
         this.isWhite = isWhite;
-        this.position = position;
+        this.square = square;
         img = isWhite ? whitePawnImg : blackPawnImg;
     }
 
     @Override
-<<<<<<< HEAD
     public void showPotentialMovement()
-=======
-    public void potentialMovements()
->>>>>>> c321fc0d9d19b2ffa4a04c3277e5b49fc5d56a79
     {
 
     }
