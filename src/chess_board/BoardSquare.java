@@ -11,7 +11,10 @@ public class BoardSquare
 
     public BoardSquare(Position position)
     {
+        int squareSide = 15;
+
         this.position = position;
+        size = new Size(squareSide, squareSide);
         isTherePiece = false;
     }
 }
