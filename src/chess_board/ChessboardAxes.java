@@ -1,4 +1,4 @@
-package src.basic_features;
+package src.chess_board;
 
 public class ChessboardAxes
 {
