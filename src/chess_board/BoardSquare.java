@@ -11,7 +11,8 @@ public class BoardSquare
     ChessboardAxes axes;
     Size size;
     boolean isTherePiece;
-    static final int squareSide = SIDE_LENGTH / 8;
+
+    public static final int squareSide = SIDE_LENGTH / 8;
 
     public BoardSquare(Position position, ChessboardAxes axes)
     {
@@ -19,5 +20,17 @@ public class BoardSquare
         this.axes = axes;
         size = new Size(squareSide, squareSide);
         isTherePiece = false;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setTherePiece(boolean therePiece) {
+        isTherePiece = therePiece;
     }
 }

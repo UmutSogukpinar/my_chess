@@ -16,7 +16,7 @@ public class ChessBoard
     private final Image boardImg;
     private final Position position;
     private final Size size;
-    private final BoardSquare[][] boardSquareArray = new BoardSquare[8][8];
+    private static final BoardSquare[][] boardSquareArray = new BoardSquare[8][8];
 
     private static final int BOARD_START_X = appWidth / 4;
     private static final int BOARD_START_Y = 0;
@@ -54,5 +54,9 @@ public class ChessBoard
     {
         graphics.drawImage(boardImg, position.getX_axis(), position.getY_axis(),
                 size.getX_axis(), size.getY_axis(), null);
+    }
+
+    public static BoardSquare[][] getBoardSquareArray() {
+        return boardSquareArray;
     }
 }
