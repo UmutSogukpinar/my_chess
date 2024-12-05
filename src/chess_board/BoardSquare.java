@@ -20,7 +20,6 @@ public class BoardSquare
         this.axes = axes;
         size = new Size(SQUARE_SIDE, SQUARE_SIDE);
         isTherePiece = false;
-
     }
 
     public Position getPosition() {
@@ -33,6 +32,14 @@ public class BoardSquare
 
     public void setTherePiece(boolean therePiece) {
         isTherePiece = therePiece;
+    }
+
+    public ChessboardAxes getAxes() {
+        return axes;
+    }
+
+    public boolean isTherePiece() {
+        return isTherePiece;
     }
 
     public void  displaySquareFeatures()

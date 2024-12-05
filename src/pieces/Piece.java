@@ -5,6 +5,7 @@ import java.awt.*;
 import src.basic_features.Position;
 import src.basic_features.Size;
 import src.chess_board.BoardSquare;
+import src.chess_board.ChessboardAxes;
 
 import static src.chess_board.BoardSquare.SQUARE_SIDE;
 
@@ -14,7 +15,9 @@ public abstract class Piece
     Image img;
     Position position;
     static final Size size = new Size((4 * SQUARE_SIDE) / 5, (5 * SQUARE_SIDE) / 6);
+    ChessboardAxes axes;
     BoardSquare square;
+    boolean doesClicked;
 
     public Piece(boolean isWhite, BoardSquare square)
     {
@@ -22,6 +25,8 @@ public abstract class Piece
         this.square = square;
         this.position = centerThePieceBySquare();
         square.setTherePiece(true);
+        doesClicked = false;
+        axes = new ChessboardAxes(square.getAxes().getX_axis(), square.getAxes().getY_axis());
     }
 
     // abstract methods

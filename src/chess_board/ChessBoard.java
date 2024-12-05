@@ -16,7 +16,7 @@ public class ChessBoard
     private final Image boardImg;
     private final Position position;
     private final Size size;
-    private static final BoardSquare[][] boardSquareArray = new BoardSquare[8][8];
+    private static BoardSquare[][] boardSquareArray = new BoardSquare[8][8];
 
     private static final double BOARD_START_X = appWidth / 4;
     private static final double BOARD_START_Y = 0;
@@ -49,11 +49,6 @@ public class ChessBoard
                         );
             }
         }
-        System.out.println("BOARD_START_X: " + BOARD_START_X);
-        System.out.println("BOARD_START_Y: " + BOARD_START_Y);
-        System.out.println("SQUARE_SIDE: " + SQUARE_SIDE);
-        System.out.println("App height: " + appHeight);
-        System.out.println();
     }
     public void drawChessBoard(Graphics graphics)
     {

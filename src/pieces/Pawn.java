@@ -1,11 +1,15 @@
 package src.pieces;
 
+import src.basic_features.Position;
 import src.chess_board.BoardSquare;
 import src.chess_board.ChessBoard;
+import src.chess_board.ChessboardAxes;
 
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
+
+import static src.chess_board.ChessBoard.getBoardSquareArray;
 
 public class Pawn extends Piece
 {
@@ -28,7 +32,23 @@ public class Pawn extends Piece
     }
 
     @Override
-    public void showPotentialMovement() {}
+    public void showPotentialMovement()
+    {
+        Position currentCoordinate = new Position(axes.getX_axis(), axes.getY_axis() - 'A');
+        if (doesClicked)
+        {
+            if (isWhite)
+            {
+                if (!(getBoardSquareArray()
+                        [(int) currentCoordinate.getX_axis()]
+                        [(int) currentCoordinate.getY_axis() + 1]
+                        .isTherePiece()))
+                {
+
+                }
+            }
+        }
+    }
 
     public void drawPiece(Graphics graphics)
     {
