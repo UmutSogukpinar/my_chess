@@ -32,7 +32,7 @@ public class Pawn extends Piece
 
     public void drawPiece(Graphics graphics)
     {
-        graphics.drawImage(img, position.getX_axis(), position.getY_axis(),
-                size.getX_axis(), size.getY_axis(), null);
+        graphics.drawImage(img, (int) position.getX_axis(), (int) position.getY_axis(),
+                (int) size.getX_axis(), (int) size.getY_axis(), null);
     }
 }

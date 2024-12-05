@@ -3,7 +3,7 @@ package src.chess_board;
 import src.basic_features.Position;
 import src.basic_features.Size;
 
-import static src.chess_board.ChessBoard.SIDE_LENGTH;
+import static src.chess_board.ChessBoard.APP_SIDE;
 
 public class BoardSquare
 {
@@ -12,14 +12,15 @@ public class BoardSquare
     Size size;
     boolean isTherePiece;
 
-    public static final int squareSide = SIDE_LENGTH / 8;
+    public static double SQUARE_SIDE = APP_SIDE / 8;
 
     public BoardSquare(Position position, ChessboardAxes axes)
     {
         this.position = position;
         this.axes = axes;
-        size = new Size(squareSide, squareSide);
+        size = new Size(SQUARE_SIDE, SQUARE_SIDE);
         isTherePiece = false;
+
     }
 
     public Position getPosition() {
@@ -32,5 +33,13 @@ public class BoardSquare
 
     public void setTherePiece(boolean therePiece) {
         isTherePiece = therePiece;
+    }
+
+    public void  displaySquareFeatures()
+    {
+        System.out.printf("Coordinates are %.2f %.2f\n", position.getX_axis(), position.getY_axis());
+        System.out.printf("Sizes are %.2f %.2f\n", size.getX_axis(), size.getY_axis());
+        System.out.printf("Is there any piece on the square: %b\n", isTherePiece);
+        System.out.printf("Board axis is %c%d\n\n", axes.getX_axis(), axes.getY_axis());
     }
 }

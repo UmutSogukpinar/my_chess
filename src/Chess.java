@@ -18,9 +18,16 @@ public class Chess extends JPanel
 
     public Chess()
     {
-        setPreferredSize(new Dimension(appWidth, appHeight));
+        setPreferredSize(new Dimension((int) appWidth, (int) appHeight));
         board = new ChessBoard();
         pawn = new Pawn(true, getBoardSquareArray()[0][0]);
+        for (int i = 0; i <= 7; i++)
+        {
+            for (int j = 0; j <= 7; j++)
+            {
+                ChessBoard.getBoardSquareArray()[i][j].displaySquareFeatures();
+            }
+        }
     }
 
     @Override

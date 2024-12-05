@@ -10,4 +10,12 @@ public class ChessboardAxes
         this.x_axis = x_axis;
         this.y_axis = y_axis;
     }
+
+    public char getX_axis() {
+        return x_axis;
+    }
+
+    public int getY_axis() {
+        return y_axis;
+    }
 }
